@@ -6,10 +6,14 @@ class User:
         self.last_name = last_name
         self.email = email
         self.age = age
-        self.is_rewards_member = False
+        self.is_rewards_member = Falsegit
         self.gold_card_points = 0
         self.account=BankAccount (int_rate=0.02, balance=0)
-        self.accounts = {}
+
+    def open_new_account(self, with_amount, interest):
+        print("Creating new account..")
+        self.account = BankAccount(with_amount, interest)
+        return self
 
     def make_deposit(self,amount):
         self.account.deposit(amount)
